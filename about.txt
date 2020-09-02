@@ -1,0 +1,25 @@
+Vigenere cipher is basically a advanced version of caesar cipher.
+It uses a simple form of polyalphabetic substitution due to which
+the vigenere cipher is more powerful than a single caesar cipher
+and is much harder to crack.
+Here instead of shifting every letter in the message with the same
+key,we shift every letter by a different key which is determined 
+by the key string
+Example:
+{'A': 1, 'B': 2, 'C': 3, 'D': 4, 'E': 5, 'F': 6, 'G': 7, 'H': 8,
+'I': 9, 'J': 10, 'K': 11, 'L': 12, 'M': 13, 'N': 14, 'O': 15,
+'P': 16, 'Q': 17, 'R': 18, 'S': 19, 'T': 20, 'U': 21, 'V': 22,
+'W': 23, 'X': 24, 'Y': 25}
+
+message: MEETMEATTHEPARK 
+key:SNAKE
+We wrap the key around as needed:
+MEETMEATTHEPARK
+SNAKESNAKESNAKE
+
+So,M is shifted to the right by the value of S in the alphabet ie 19 M becomes F
+   E is shifted to the right by the value of N in the alphabet ie 14 E becomes S
+and so on...
+Hence the message MEETMEATTHEPARK becomes FSFERXOUEMXDBCP
+For decryption the letter is simply shifted to the left.
+
